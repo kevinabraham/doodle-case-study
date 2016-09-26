@@ -12,7 +12,7 @@ import javax.swing.{JPanel, SwingUtilities, Timer}
 
 import scala.collection.mutable.Queue
 
-class CanvasPanel extends JPanel {
+class CanvasPanel(val frame: CanvasFrame) extends JPanel {
   import CanvasPanel._
 
   // Drawing must be done on the Swing thread, while calls to the Canvas

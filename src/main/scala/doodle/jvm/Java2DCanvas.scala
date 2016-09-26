@@ -4,7 +4,7 @@ package jvm
 import doodle.core.{Color, Stroke => DoodleStroke}
 import doodle.backend.Canvas
 
-class Java2DCanvas(panel: CanvasPanel) extends Canvas {
+class Java2DCanvas(val panel: CanvasPanel) extends Canvas {
   import CanvasPanel._
 
   val queue = panel.queue
@@ -43,7 +43,7 @@ class Java2DCanvas(panel: CanvasPanel) extends Canvas {
 }
 
 object Java2DCanvas {
-  def canvas: Canvas = {
+  def canvas: Java2DCanvas = {
     val frame = new CanvasFrame()
     frame.setVisible(true)
     frame.panel.canvas

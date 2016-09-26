@@ -1,12 +1,11 @@
 package doodle
-package jvm
+package example
 
 import doodle.core._
+import doodle.backend.Canvas
 
-object Example {
-  def draw: Unit = {
-    val canvas = Java2DCanvas.canvas
-
+object Dog {
+   def draw(canvas: Canvas): Unit = {
     // The coordinates for this (upside down) dog in the style of Picasso comes
     // from a Jeremy Kun:
     // http://jeremykun.com/2013/05/11/bezier-curves-and-picasso/
@@ -36,4 +35,5 @@ object Example {
     canvas.setStroke(Stroke(3.0, Color.black, Line.Cap.Round, Line.Join.Round))
     canvas.stroke()
   }
+ 
 }
